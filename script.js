@@ -102,7 +102,8 @@ function handleScroll() {
     
     allNavLinks.forEach(link => {
         link.classList.remove('active');
-        if (link.getAttribute('href').slice(1) === current) {
+        const href = link.getAttribute('href');
+        if (href && href.startsWith('#') && href.slice(1) === current) {
             link.classList.add('active');
         }
     });
