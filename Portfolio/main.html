@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThePrimeagen - Performance Engineer & Developer Advocate</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+    
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span class="logo-text">AM</span>
+                <span class="logo-cursor">|</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    Hi, I'm <span class="highlight">Antu Marma</span>
+                </h1>
+                <div class="typewriter-container">
+                    <p class="typewriter-text">SQA Intern</p>
+                    <span class="typewriter-cursor">|</span>
+                </div>
+                <p class="hero-description">
+                    Aspiring SQA (Software Quality Assurance) Engineer
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-rocket"></i>
+                        Get In Touch
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-code"></i>
+                        View Projects
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <div class="window-controls">
+                            <span class="control close"></span>
+                            <span class="control minimize"></span>
+                            <span class="control maximize"></span>
+                        </div>
+                        <div class="window-title">test_scenario.py</div>
+                    </div>
+                    <div class="code-content">
+                        <div class="code-line">
+                            <span class="line-number">1</span>
+                            <span class="code-text"><span class="keyword">def</span> <span class="function">test_login_functionality</span>():</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">2</span>
+                            <span class="code-text">    <span class="comment"># Test Case ID: TC_LOGIN_001</span></span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">3</span>
+                            <span class="code-text">    <span class="variable">test_data</span> = <span class="function">load_test_data</span>(<span class="string">'login_credentials.json'</span>)</span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">4</span>
+                            <span class="code-text">    <span class="keyword">assert</span> <span class="function">validate_credentials</span>(test_data) == <span class="boolean">True</span></span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">5</span>
+                            <span class="code-text">    <span class="comment"># Bug detected: Invalid error message</span></span>
+                        </div>
+                        <div class="code-line">
+                            <span class="line-number">6</span>
+                            <span class="code-text">    <span class="function">log_bug</span>(<span class="string">"BUG-045: Login error message unclear"</span>)</span>
+                        </div>
+                        <div class="cursor-line"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">01.</span> About Me
+            </h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-description">
+                         I am Antu Marma, Computer Science and Engineering student at Green University of Bangladesh,
+                          with a strong focus on Software Quality Assurance. My goal is to build a career where I can 
+                          contribute to creating high-quality software products through systematic testing and quality 
+                          assurance practices.
+                          I have hands-on experience with manual testing methodologies, test case design,
+                           bug reporting, and working within Agile development environments. I'm currently
+                            expanding my skills in automation testing and API testing to become a well-rounded
+                         QA professional.
+                    </p>
+                    <p class="about-description">
+
+                          I have hands-on experience with manual testing methodologies, test case design,
+                           bug reporting, and working within Agile development environments. I'm currently
+                            expanding my skills in automation testing and API testing to become a well-rounded
+                         QA professional.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Months Experience</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">100+</span>
+                            <span class="stat-label">Test Cases Written</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-number">2+</span>
+                            <span class="stat-label">Open Source Projects</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-container">
+                        <div class="image-placeholder">
+                            <i class="fas fa-user-astronaut"></i>
+                        </div>
+                        <div class="image-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">02.</span> Skills & Technologies
+            </h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-bug"></i>
+                        Core SQA Skills
+                    </h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Manual Testing</span>
+                        <span class="skill-item">Test Case Design</span>
+                        <span class="skill-item">Bug Reporting & Tracking</span>
+                        <span class="skill-item">Functional Testing</span>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-code"></i>
+                        Programming & Technical
+                    </h3>
+                    <div class="skill-items">
+    
+                        <span class="skill-item">C</span>
+                        <span class="skill-item">Python</span>
+                        <span class="skill-item">Java</span>
+                        <span class="skill-item">HTML/CSS</span>
+                        <span class="skill-item">WordPress</span>
+                        <span class="skill-item">LaTeX</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Testing Tools & Technologies
+                    </h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Selenium WebDriver</span>
+                        <span class="skill-item">Jira</span>
+                        <span class="skill-item">Trello</span>
+                        <span class="skill-item">Git & GitHub</span>
+                    </div>
+                </div>
+
+                
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-desktop"></i>
+                        Design & Creative Tools
+                    </h3>
+                    <div class="skill-items">
+                        <span class="skill-item">Adobe Photoshop</span>
+                        <span class="skill-item">Adobe Premiere Pro</span>
+                        <span class="skill-item">Canva</span>
+                        <span class="skill-item">AutoCAD</span>
+                        <span class="skill-item">MS Office</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <!-- <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">03.</span> Featured Projects
+            </h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <i class="fas fa-folder"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ThePrimeagen/harpoon" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Harpoon</h3>
+                    <p class="project-description">
+                        A NeoVim plugin for lightning-fast file navigation. Navigate to any file in your project 
+                        with just a few keystrokes, designed for developers who demand speed.
+                    </p>
+                    <div class="project-tech">
+                        <span>Lua</span>
+                        <span>NeoVim</span>
+                        <span>Plugin</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <i class="fas fa-folder"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ThePrimeagen/ts-rust-zig-deez" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Deez Interpreter</h3>
+                    <p class="project-description">
+                        A programming language interpreter implemented in TypeScript, Rust, and Zig. 
+                        Educational project demonstrating language design and compiler construction.
+                    </p>
+                    <div class="project-tech">
+                        <span>TypeScript</span>
+                        <span>Rust</span>
+                        <span>Zig</span>
+                        <span>Interpreter</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <i class="fas fa-folder"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ThePrimeagen/vim-with-me" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Vim With Me</h3>
+                    <p class="project-description">
+                        A streaming overlay system for live coding sessions. Real-time code sharing, 
+                        audience interaction, and performance metrics for educational content.
+                    </p>
+                    <div class="project-tech">
+                        <span>Go</span>
+                        <span>WebSocket</span>
+                        <span>React</span>
+                        <span>Streaming</span>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-folder">
+                            <i class="fas fa-folder"></i>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/ThePrimeagen/left-pad" target="_blank">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="#" target="_blank">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <h3 class="project-title">Left-Pad Performance</h3>
+                    <p class="project-description">
+                        A comprehensive benchmarking suite comparing left-pad implementations across 
+                        different languages and optimization techniques. Because performance matters.
+                    </p>
+                    <div class="project-tech">
+                        <span>JavaScript</span>
+                        <span>Benchmark</span>
+                        <span>Performance</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">
+                <span class="title-number">04.</span> Get In Touch
+            </h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-subtitle">Let's Connect</h3>
+                    <p class="contact-description">
+                        I'm always interested in collaborating on interesting projects, 
+                        speaking at events, or helping developers level up their skills.
+                    </p>
+                    <div class="contact-links">
+                        <a href="https://www.linkedin.com/in/antumarma/" target="_blank" class="contact-link">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a href="https://github.com/antumarma" target="_blank" class="contact-link">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="https://www.instagram.com/antumarma/" target="_blank" class="contact-link">
+                            <i class="fab fa-instagram"></i>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="https://www.facebook.com/antu.marma" target="_blank" class="contact-link">
+                            <i class="fab fa-facebook"></i>
+                            <span>Facebook</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-text">
+                    <p>© 2025 Antu Marma. All rights reserved..</p>
+                </div>
+                <div class="footer-links">
+                    <a href="https://github.com/antumarma" target="_blank">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/antumarma/" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://www.instagram.com/antumarma/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
