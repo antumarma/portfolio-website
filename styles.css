@@ -41,6 +41,11 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+header.hidden {
+    transform: translateY(-100%);
 }
 
 .navbar {

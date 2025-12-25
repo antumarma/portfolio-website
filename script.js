@@ -35,22 +35,6 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Add scroll effect to header
-let lastScroll = 0;
-const header = document.querySelector('header');
-
-window.addEventListener('scroll', () => {
-    const currentScroll = window.pageYOffset;
-    
-    if (currentScroll > lastScroll && currentScroll > 100) {
-        header.style.transform = 'translateY(-100%)';
-    } else {
-        header.style.transform = 'translateY(0)';
-    }
-    
-    lastScroll = currentScroll;
-});
-
 // Add animation on scroll for sections
 const observerOptions = {
     threshold: 0.1,
@@ -75,25 +59,51 @@ sections.forEach(section => {
     observer.observe(section);
 });
 
-// Active navigation highlighting
+// Combined scroll handler for header hide/show and active navigation
+let lastScroll = 0;
+const header = document.querySelector('header');
+
+// Throttle scroll events for better performance
+let ticking = false;
+
 window.addEventListener('scroll', () => {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            handleScroll();
+            ticking = false;
+        });
+        ticking = true;
+    }
+});
+
+function handleScroll() {
+    const currentScroll = window.pageYOffset;
+    
+    // Header hide/show on scroll
+    if (currentScroll > lastScroll && currentScroll > 100) {
+        header.classList.add('hidden');
+    } else {
+        header.classList.remove('hidden');
+    }
+    lastScroll = currentScroll;
+    
+    // Active navigation highlighting
+    const allSections = document.querySelectorAll('section');
+    const allNavLinks = document.querySelectorAll('.nav-link');
     
     let current = '';
     
-    sections.forEach(section => {
+    allSections.forEach(section => {
         const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (window.pageYOffset >= sectionTop - 200) {
+        if (currentScroll >= sectionTop - 200) {
             current = section.getAttribute('id');
         }
     });
     
-    navLinks.forEach(link => {
+    allNavLinks.forEach(link => {
         link.classList.remove('active');
         if (link.getAttribute('href').slice(1) === current) {
             link.classList.add('active');
         }
     });
-});
+}
