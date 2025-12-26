@@ -48,12 +48,13 @@ git clone https://github.com/yourusername/portfolio-website.git
 cd portfolio-website
 ```
 
-3. Open the Portfolio folder and launch `index.html` in your browser, or use a local server
+3. Open the Portfolio folder and launch `index.html` in your browser, or use a local server:
+```bash
+# Using Python
+python -m http.server 8000
 
-## 📧 Contact
+# Using Node.js (http-server)
+npx http-server Portfolio
+```
 
-Feel free to reach out to me:
-
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- **GitHub**: [Your GitHub Profile](https://github.com/yourusername)
+4. Visit `http://localhost:8000` in your browser
