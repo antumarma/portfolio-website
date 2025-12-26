@@ -387,6 +387,74 @@ section {
     animation: glow 3s ease-in-out infinite alternate;
 }
 
+/* Experience Section */
+.experience {
+    padding: 100px 0;
+    background: var(--bg-primary);
+}
+
+.experience-timeline {
+    max-width: 800px;
+    margin: 3rem auto 0;
+}
+
+.experience-item {
+    background: var(--card-bg);
+    border: 1px solid var(--card-border);
+    border-left: 3px solid var(--accent-primary);
+    border-radius: 8px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.experience-item:hover {
+    transform: translateX(10px);
+    box-shadow: 0 10px 30px rgba(0, 255, 136, 0.1);
+}
+
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.experience-title {
+    font-size: 1.5rem;
+    color: var(--accent-primary);
+    font-weight: 600;
+}
+
+.experience-duration {
+    color: var(--text-secondary);
+    font-family: var(--font-mono);
+    font-size: 0.9rem;
+}
+
+.experience-company {
+    color: var(--text-primary);
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-company i {
+    color: var(--accent-primary);
+    margin-right: 0.5rem;
+}
+
+.experience-location {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.experience-location i {
+    color: var(--accent-secondary);
+    margin-right: 0.5rem;
+}
+
 /* Skills Section */
 .skills-grid {
     display: grid;
