@@ -58,19 +58,3 @@ npx http-server Portfolio
 ```
 
 4. Visit `http://localhost:8000` in your browser
-
-## 📧 Contact
-
-Feel free to reach out to me:
-
-- **Email**: your.email@example.com
-- **LinkedIn**: [Your LinkedIn Profile](https://linkedin.com/in/yourprofile)
-- **GitHub**: [Your GitHub Profile](https://github.com/yourusername)
-
-## 📄 License
-
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-Made with ❤️ by Antu Marma
