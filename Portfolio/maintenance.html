@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Under Maintenance — Antu</title>
+<style>
+  :root{
+    --bg: #0a0e14;
+    --panel: #10151d;
+    --border: #1f2733;
+    --text: #c9d1d9;
+    --muted: #5b6675;
+    --green: #3fb950;
+    --amber: #d29922;
+    --red: #f85149;
+    --cyan: #56d4dd;
+  }
+  *{ box-sizing:border-box; }
+  html,body{ height:100%; }
+  body{
+    margin:0;
+    background:
+      radial-gradient(1200px 600px at 50% -10%, rgba(63,185,80,0.06), transparent 60%),
+      var(--bg);
+    color:var(--text);
+    font-family:"JetBrains Mono","Fira Code",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:24px;
+  }
+
+  .window{
+    width:100%;
+    max-width:760px;
+    background:var(--panel);
+    border:1px solid var(--border);
+    border-radius:10px;
+    box-shadow:0 20px 60px rgba(0,0,0,0.5);
+    overflow:hidden;
+  }
+
+  .titlebar{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    padding:12px 16px;
+    background:#0d131b;
+    border-bottom:1px solid var(--border);
+  }
+  .dot{ width:11px; height:11px; border-radius:50%; }
+  .dot.r{ background:#f85149; }
+  .dot.y{ background:#d29922; }
+  .dot.g{ background:#3fb950; }
+  .titlebar .path{
+    margin-left:12px;
+    font-size:12px;
+    color:var(--muted);
+  }
+
+  .term{
+    padding:28px 28px 24px;
+    font-size:13.5px;
+    line-height:1.75;
+  }
+
+  .prompt{ color:var(--cyan); }
+  .cmd{ color:var(--text); }
+  .muted{ color:var(--muted); }
+  .ok{ color:var(--green); }
+  .warn{ color:var(--amber); }
+  .fail{ color:var(--red); }
+
+  .line{
+    opacity:0;
+    transform:translateY(4px);
+    animation:in 0.35s ease forwards;
+    white-space:pre-wrap;
+  }
+
+  @keyframes in{
+    to{ opacity:1; transform:translateY(0); }
+  }
+
+  .bar-track{
+    display:inline-block;
+    width:220px;
+    height:8px;
+    background:#1c2430;
+    border-radius:4px;
+    overflow:hidden;
+    vertical-align:middle;
+    margin:0 8px 2px 0;
+  }
+  .bar-fill{
+    height:100%;
+    width:0%;
+    background:linear-gradient(90deg,var(--green),var(--cyan));
+    border-radius:4px;
+    animation:fill 2.4s ease forwards;
+    animation-delay:1.6s;
+  }
+  @keyframes fill{ to{ width:100%; } }
+
+  .status-box{
+    margin-top:22px;
+    padding:16px 18px;
+    border:1px solid var(--border);
+    border-left:3px solid var(--amber);
+    background:#141b25;
+    border-radius:6px;
+    opacity:0;
+    animation:in 0.4s ease forwards;
+    animation-delay:4.2s;
+  }
+  .status-box h1{
+    margin:0 0 6px;
+    font-size:15px;
+    letter-spacing:0.03em;
+    color:var(--amber);
+  }
+  .status-box p{
+    margin:0;
+    font-size:13px;
+    color:var(--text);
+    line-height:1.6;
+  }
+  .status-box p .muted{ display:block; margin-top:8px; }
+
+  .cursor{
+    display:inline-block;
+    width:8px;
+    height:15px;
+    background:var(--green);
+    vertical-align:text-bottom;
+    margin-left:4px;
+    animation:blink 1s step-end infinite;
+  }
+  @keyframes blink{ 50%{ opacity:0; } }
+
+  .footer{
+    margin-top:22px;
+    display:flex;
+    flex-wrap:wrap;
+    gap:14px;
+    font-size:12px;
+    opacity:0;
+    animation:in 0.4s ease forwards;
+    animation-delay:4.5s;
+  }
+  .footer a{
+    color:var(--muted);
+    text-decoration:none;
+    border-bottom:1px dotted var(--border);
+    padding-bottom:1px;
+  }
+  .footer a:hover{ color:var(--cyan); border-color:var(--cyan); }
+
+  @media (max-width:480px){
+    .term{ padding:20px 18px; font-size:12.5px; }
+    .bar-track{ width:130px; }
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    .line, .status-box, .footer{ animation:none; opacity:1; }
+    .bar-fill{ animation:none; width:100%; }
+    .cursor{ animation:none; }
+  }
+</style>
+</head>
+<body>
+
+<div class="window">
+  <div class="titlebar">
+    <span class="dot r"></span>
+    <span class="dot y"></span>
+    <span class="dot g"></span>
+    <span class="path">antu@portfolio — zsh — 80×24</span>
+  </div>
+
+  <div class="term">
+    <div class="line" style="animation-delay:0.1s"><span class="prompt">$</span> <span class="cmd">./run_site_checks.sh --env=production</span></div>
+    <div class="line" style="animation-delay:0.5s"><span class="muted">[INFO]</span> deploying updates to portfolio…</div>
+    <div class="line" style="animation-delay:0.9s"><span class="ok">✓</span> backend services         <span class="muted">reachable</span></div>
+    <div class="line" style="animation-delay:1.2s"><span class="ok">✓</span> assets pipeline           <span class="muted">rebuilding</span></div>
+    <div class="line" style="animation-delay:1.6s">
+      <span class="warn">⚠</span> content sync <span class="bar-track"><span class="bar-fill"></span></span><span class="muted">in progress…</span>
+    </div>
+    <div class="line" style="animation-delay:3.9s"><span class="muted">[INFO]</span> estimated completion: <span class="cmd">shortly</span></div>
+
+    <div class="status-box">
+      <h1>SITE_STATUS: MAINTENANCE</h1>
+      <p>
+        I'm pushing some updates to this portfolio right now, so a few things might look off. Everything will be back to normal soon — thanks for your patience.
+        <span class="muted">Feel free to check back in a bit, or reach me directly below.</span>
+      </p>
+    </div>
+
+    <div class="footer">
+      <a href="mailto:antumarma@outlook.com">:antumarma@outlook.com</a>
+      <a href="https://github.com/antumarma" target="_blank" rel="noopener">github</a>
+      <a href="https://www.linkedin.com/in/antumarma/" target="_blank" rel="noopener">linkedin</a>
+    </div>
+
+    <div class="line" style="animation-delay:5.0s; margin-top:22px;"><span class="prompt">$</span><span class="cursor"></span></div>
+  </div>
+</div>
+
+</body>
+</html>
